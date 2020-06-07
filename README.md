@@ -67,9 +67,9 @@ Dynamic UI
 
 - [ ] The div with the id, entryHolder should have three child divs with the ids:
 
-date
-temp
-content
+  - date
+  - temp
+  - content
 ### Event Listeners
 
 - [ ] Adds an event listener to an existing HTML button from DOM using Vanilla JS.
