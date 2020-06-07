@@ -19,7 +19,7 @@ Project Environment Setup
 
 ### API Credentials
 
-Create API credentials on OpenWeatherMap.com
+- [ ] Create API credentials on OpenWeatherMap.com
 
 APIs and Routes
 ===============
