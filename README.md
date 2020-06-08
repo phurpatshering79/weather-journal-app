@@ -9,13 +9,13 @@ Project Environment Setup
 
 ### Project Dependencies
 
-- [ ] The ‘cors’ package should be installed in the project from the command line, required in the project file server.js, and the instance of the app should be setup to use cors().
+- [x] The ‘cors’ package should be installed in the project from the command line, required in the project file server.js, and the instance of the app should be setup to use cors().
 
-- [ ] The body-parser package should be installed and included in the project.
+- [x] The body-parser package should be installed and included in the project.
 
 ### Local Server
 
-- [ ] Local server should be running and producing feedback to the Command Line through a working callback function.
+- [x] Local server should be running and producing feedback to the Command Line through a working callback function.
 
 ### API Credentials
 
