@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
+//Initialize the main project folder. Basically get the broswer side files.
+app.use(express.static('website'));
+
 //set the port number
 const port = 8000
 
@@ -24,4 +27,11 @@ const port = 8000
 //It accepts two arguments, one is the port and the other is a callback functioin that initiates the action once the server is 
 //created
 
+//spin up the server
 const server = app.listen(port, listening)
+
+let projectData = {}
+
+function listening(){
+    console.log('hello this is port ' + port)
+}
