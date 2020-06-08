@@ -3,7 +3,7 @@ Project Environment Setup
 
 ### Node and Express Environment
 
-- [ ] Node and Express should be installed on the local machine. The project file server.js should require express(), and should create an instance of their app using express.
+- [x] Node and Express should be installed on the local machine. The project file server.js should require express(), and should create an instance of their app using express.
 
 - [ ] The Express app instance should be pointed to the project folder with .html, .css, and .js files.
 
