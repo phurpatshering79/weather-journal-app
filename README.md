@@ -19,18 +19,18 @@ Project Environment Setup
 
 ### API Credentials
 
-- [s] Create API credentials on OpenWeatherMap.com
+- [x] Create API credentials on OpenWeatherMap.com
 
 APIs and Routes
 ===============
 
 ### APP API Endpoint
 
-- [ ] There should be a JavaScript Object named projectData initiated in the file server.jsto act as the app API endpoint.
+- [x] There should be a JavaScript Object named projectData initiated in the file server.jsto act as the app API endpoint.
 
 ### Integrating OpenWeatherMap API
 
-- [ ] The personal API Key for OpenWeatherMap API is saved in a named const variable.
+- [x] The personal API Key for OpenWeatherMap API is saved in a named const variable.
 
 - [ ] The API Key variable is passed as a parameter to fetch() .#
 
