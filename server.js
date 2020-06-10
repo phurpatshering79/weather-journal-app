@@ -33,5 +33,5 @@ const server = app.listen(port, listening)
 let projectData = {}
 
 function listening(){
-    console.log('hello this is port ' + port)
+    console.log('The server is running on port ' + port)
 }
