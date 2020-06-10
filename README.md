@@ -32,9 +32,9 @@ APIs and Routes
 
 - [x] The personal API Key for OpenWeatherMap API is saved in a named const variable.
 
-- [ ] The API Key variable is passed as a parameter to fetch() .#
+- [x] The API Key variable is passed as a parameter to fetch() .#
 
-- [ ] Data is successfully returned from the external API.
+- [x] Data is successfully returned from the external API.
 
 ### Return Endpoint Data/GET Route I: Server Side
 
