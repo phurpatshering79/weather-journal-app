@@ -2,7 +2,7 @@
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.toLocaleString('default', { month: 'long' }) +' '+ d.getDate()+'/'+ d.getFullYear();
 
 //http://api.openweathermap.org/data/2.5/weather?zip=11368&appid=2dd13ff75ee52f903b5cbc5a623b8354
 
@@ -31,6 +31,10 @@ function OnClick(e){
          
          postData('/post',journal).then(updateUI)
     })
+
+    document.querySelector('form').reset()
+
+
 }
 
 const getWeather = async (baseURL,ZipCode,ApiKey) => {
@@ -75,16 +79,32 @@ const postData = async (url='', data={}) => {
 const updateUI = async () => {
     const response = await fetch('/all')
     try{
-        const newData = await response.json()
+        const projectData = await response.json()
+
         const TempHead = document.querySelector('.card-header')
         const TextContent = document.querySelector('.card-body')
         const Datefooter = document.querySelector('.card-footer')
-        console.log(TempHead,TextContent,Datefooter)
+
+        const parentNode = document.getElementById('entry')
+
+        projectData.forEach((element) =>{
+            let cloneHead = TempHead.cloneNode(true)
+            let cloneBody = TextContent.cloneNode(true)
+            let cloneFooter = Datefooter.cloneNode(true)
+
+            cloneHead.innerHTML = element.city + ', ' + element.temp + 'F'
+            cloneBody.innerHTML = element.feelings
+            cloneFooter.innerHTML = element.date
+            
+            parentNode.appendChild(cloneHead)
+            parentNode.appendChild(cloneBody)
+            parentNode.appendChild(cloneFooter)
+            
+
+        })
     }catch(error){
         console('error',error);
     }
-    
-
 }
 
 
