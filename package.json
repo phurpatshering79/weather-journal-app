@@ -1,6 +1,9 @@
 {
 	"name" : "weather-journal",
 	"version" : "1.0.0",
+	"engines": {
+		"node": "12.6.3"
+	},
 	"scripts" : {
 		"start" : "node server.js"
 	},
