@@ -20,7 +20,7 @@ function OnClick(e){
     const ZipCode = document.getElementById("zip").value
 
     weatherData = getWeather(baseURL,ZipCode,ApiKey)  //Call to a function that fetches data from the web, returns an
-                                                      // of type [temperature, city]
+                                                      // of type [temperature, city]'
     weatherData.then((result) => {
         let journal = {
             temp : result[0],       //accessing temperature as the first index
@@ -29,7 +29,7 @@ function OnClick(e){
             date : newDate
          }
          
-         postData('/post',journal).then(updateUI)
+         postData('/post',journal).then(updateUI())
     })
 
     document.querySelector('form').reset()
@@ -56,7 +56,6 @@ const getWeather = async (baseURL,ZipCode,ApiKey) => {
 
 
 const postData = async (url='', data={}) => {
-
     const response = await fetch(url, {
         method: 'POST', 
         credentials: 'same-origin',
@@ -66,9 +65,10 @@ const postData = async (url='', data={}) => {
         // Body data type must match "Content-Type" header        
         body: JSON.stringify(data), 
     })
-
+    
     try {
         const newData = await response.json()
+        console.log('this is the post function with body',newData)
         return newData
     } catch(error){
         console.log('Failure to post data')
@@ -80,7 +80,6 @@ const updateUI = async () => {
     const response = await fetch('/all')
     try{
         const projectData = await response.json()
-
         const TempHead = document.querySelector('.card-header')
         const TextContent = document.querySelector('.card-body')
         const Datefooter = document.querySelector('.card-footer')
