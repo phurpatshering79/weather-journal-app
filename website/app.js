@@ -7,7 +7,7 @@ let newDate = d.toLocaleString('default', { month: 'long' }) +' '+ d.getDate()+'
 //http://api.openweathermap.org/data/2.5/weather?zip=11368&appid=2dd13ff75ee52f903b5cbc5a623b8354
 
 
-const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip="
+const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip="
 const ApiKey = "&appid=2dd13ff75ee52f903b5cbc5a623b8354" 
 
 
