@@ -36,7 +36,9 @@ const projectData = []
 function listening(){
     console.log('The server is running on port ' + port)
 }
-
+app.get('/',(req,res)=>{
+    res.render(index)
+})
 app.post('/post',(req,res)=>{
     projectData.push(req.body)
     res.send(projectData)
