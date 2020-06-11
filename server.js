@@ -19,7 +19,7 @@ const cors = require('cors');
 app.use(cors());
 
 //Initialize the main project folder. Basically get the broswer side files.
-app.use(express.static('website'));
+app.use(express.static(__dirname+'/website'));
 
 //set the port number
 const port = process.env.portcl || 8080
