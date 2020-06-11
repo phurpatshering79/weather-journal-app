@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.static(__dirname+'/website'));
 
 //set the port number
-const port = process.env.portcl || 8080
+const port = process.env.PORT || 8080
 
 //create a new varible that is the server, using the .listen() method on the app instance.
 //It accepts two arguments, one is the port and the other is a callback functioin that initiates the action once the server is 
