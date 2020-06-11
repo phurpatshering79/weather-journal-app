@@ -30,8 +30,18 @@ const port = 8000
 //spin up the server
 const server = app.listen(port, listening)
 
-let projectData = {}
+const projectData = []
 
 function listening(){
     console.log('The server is running on port ' + port)
 }
+
+app.post('/post',(req,res)=>{
+    projectData.push(req.body)
+    res.send(projectData)
+})
+
+app.get('/all',(req,res) =>{
+    res.send(projectData)
+})
+
