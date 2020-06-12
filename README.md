@@ -38,19 +38,19 @@ APIs and Routes
 
 ### Return Endpoint Data/GET Route I: Server Side
 
-- [ ] There should be a GET route setup on the server side with the first argument as a string naming the route, and the second argument a callback function to return the JS object created at the top of server code.
+- [x] There should be a GET route setup on the server side with the first argument as a string naming the route, and the second argument a callback function to return the JS object created at the top of server code.
 
 ### Return Endpoint Data/GET Route II: Client Side
 
-- [ ] There should be an asynchronous function to fetch the data from the app endpoint
+- [x] There should be an asynchronous function to fetch the data from the app endpoint
 
 ### POST Route
 
-- [ ] You should be able to add an entry to the project endpoint using a POST route setup on the server side and executed on the client side as an asynchronous function.
+- [x] You should be able to add an entry to the project endpoint using a POST route setup on the server side and executed on the client side as an asynchronous function.
 
-- [ ] The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST.
+- [x] The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST.
 
-- [ ] The server side function should create a new entry in the apps endpoint (the named JS object) consisting of the data received from the client side POST.
+- [x] The server side function should create a new entry in the apps endpoint (the named JS object) consisting of the data received from the client side POST.
 
 Dynamic UI
 ==========
